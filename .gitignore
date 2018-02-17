@@ -1,0 +1,15 @@
+/cmd/miniconfd/miniconfd
+/miniconfd
+
+/_temp
+/_test
+
+*.out
+*.so
+*.a
+
+*.exe
+*.dll
+*.lib
+
+*.log

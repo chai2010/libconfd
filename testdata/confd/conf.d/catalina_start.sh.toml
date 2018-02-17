@@ -1,0 +1,19 @@
+# Copyright 2018 <chaishushan{AT}gmail.com>. All rights reserved.
+# Use of this source code is governed by a Apache
+# license that can be found in the LICENSE file.
+
+[template]
+prefix = "tomcat"
+keys = [
+	"Xmx",
+	"Xms"
+]
+
+src = "catalina_start.sh.tmpl"
+dest = "catalina_start.sh"
+mode = "0775"
+
+reload_cmd = """
+	/usr/local/tomcat/bin/catalina.sh stop -force && \
+	/usr/local/tomcat/bin/catalina_start.sh start
+"""

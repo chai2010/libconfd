@@ -1,0 +1,15 @@
+# Copyright 2018 <chaishushan{AT}gmail.com>. All rights reserved.
+# Use of this source code is governed by a Apache
+# license that can be found in the LICENSE file.
+
+[template]
+src = "simple.json.tmpl"
+dest = "simple.json"
+
+check_cmd = """
+	mingw32-make -C ${LIBCONFD_CONFDIR}/_apps/simple -f Makefile.windows check-config
+"""
+
+reload_cmd = """
+	mingw32-make -C ${LIBCONFD_CONFDIR}/_apps/simple -f Makefile.windows restart
+"""
